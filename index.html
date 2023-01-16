@@ -4,18 +4,47 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="icon.png">
         <title>test 1</title>
         <link rel="stylesheet" href="style.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <script src="app.js"></script>
+        <script src="app.js"></script>    
     </head>
-    <body onload="join();uwu()">
+    <body class="animated" onload="join();uwu()">
         <h1>
-            type in something...
+            type in any word...
         </h1>
         <label for="lol">enter:</label>
         <input type="text" id="lol" name="lol">
-        <button onclick="tester();uwu()">enter</button>
+        <button onclick="uwu()">Continue</button>
+        <div class="bottom-left">
+            <button id="myBtn" onclick="rat()">Stop changing colors</button>
+        </div>
+        <div class="bottom-right">
+            <button id="myBtn2" onclick="pp()">Clear inputs</button>
+        </div>
+        <div id="removable"></div>
+        <script>
+            var button = document.querySelector("#myBtn");
+            var body = document.querySelector("body");
+        
+            button.addEventListener("click", function() {
+                if (body.classList.contains("animated")) {
+                    body.classList.remove("animated");
+                } else {
+                    body.classList.add("animated");
+                }
+            });
+
+            button.addEventListener("click", function() {
+                if (body.classList.contains("animated")) {
+                    body.classList.remove("animated");
+                    button.innerHTML = "Start changing colors";
+                } else {
+                    body.classList.add("animated");
+                    button.innerHTML = "Stop changing colors";
+                }
+            });
+        </script>
     </body>
 </html>
-
