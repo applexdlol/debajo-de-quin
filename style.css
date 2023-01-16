@@ -1,9 +1,8 @@
 button {
-    font-size: 24px;
+    font-size: 15px;
     background-color: rgb(234, 255, 0);
     color: rgb(0, 0, 0);    
     margin-top: 10px;
-    animation: rainbow 5s linear infinite;
 }
 
 @keyframes rainbow {
@@ -31,21 +30,20 @@ button {
     100% {
         background-color: red;
     }
-    
 }
 
 body {
     background-color: rgb(255, 255, 255); 
 
-    font-family: 'Ubuntu Condensed', sans-serif;
+    font-family: "Times New Roman";
     text-align: center;
     color: rgb(0, 0, 0);
     font-size: 18px; 
 
     width: 300px; 
     margin: auto;
-
 }
+
 
 label {
     font-size: 20px;
@@ -53,10 +51,26 @@ label {
 
 button:hover {
     background-color: goldenrod;
-    animation-play-state: paused;
+    animation: none;
 }
 
-button:hover {
-    background-color: goldenrod;
-    animation: none;
+.bottom-left {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.animated {
+    animation: rainbow 10s linear infinite;
+}
+
+.class1 {
+    text-align: center;
+    color: black;
+  }
+
+.bottom-right {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
